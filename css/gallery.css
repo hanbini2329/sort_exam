@@ -1,0 +1,128 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+*,
+*:after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard-Regular';
+    background: #D2CCC2;
+}
+
+a {
+    font: bold 1rem 'Pretendard-Regular';
+    color: #4f4f4f;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+}
+
+a:hover {
+    color: #D8501E;
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: left;
+    width: 800px;
+    margin: 6rem auto 2rem;
+    color: #4f4f4f;
+}
+
+#content {
+    width: 800px;
+    margin: 0 auto 8rem;
+    font-size: 0.8em;
+    border-top: 2px solid #4f4f4f;
+    padding-top: 20px;
+}
+
+#content .list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+}
+
+#content ul li span {
+    display: block;
+    text-align: center;
+}
+
+#content ul li span.date {
+    text-align: center;
+    font-size: 1em;
+    color: #333;
+    margin: 5px 0;
+}
+
+#content ul li span.price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #D8501E;
+}
+
+#content ul li a {
+    display: block;
+    overflow: hidden;
+}
+
+#content ul li a img {
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+}
+
+#content ul li a:hover img {
+    transform: scale(1.1);
+}
+
+.search {
+    width: 700px;
+    margin: 0 auto 20px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+
+.search>ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.search>ul>li {
+    position: relative;
+    width: 180px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #4f4f4f;
+    font-weight: bold;
+}
+
+.search>ul>li::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: #D8501E;
+    transition: 0.4s;
+}
+
+.search>ul>li:hover::after {
+    width: 180px;
+}
+
+.search>ul>li.active::after {
+    width: 180px;
+}
